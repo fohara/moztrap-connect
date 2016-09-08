@@ -279,7 +279,10 @@ class Connect:
         if name:
             for env in run_envs:
                 for element in env['elements']:
-                    if element['name'] == name:
+                    el_id = element.split('/')[-2]
+                    r = self.do_get("element", id=el_id)
+                    el = loads(r.text)
+                    if el['name'] == name:
                         return [env]
         return run_envs
 

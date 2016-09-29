@@ -14,7 +14,7 @@ class Connect:
     """
 
 
-    def __init__(self, protocol, host, username, api_key, limit=100, DEBUG=False):
+    def __init__(self, protocol, host, username, api_key, limit=1000, DEBUG=False):
         self.DEBUG = DEBUG
         self.protocol = protocol
         self.host = host
